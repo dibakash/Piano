@@ -77,7 +77,19 @@ function playPiano(keyNumber) {
   switch (keyNumber) {
     case 0:
       notes.c.currentTime = 1;
-      notes.c.play();
+
+      let playPromise = new Promise((resolve, reject) => {
+        resolve(notes.c.play());
+      });
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            console.log("hi");
+            notes.c.play();
+          })
+          .catch(() => console.log("error"));
+      }
       break;
     case 1:
       notes.d.currentTime = 1;
