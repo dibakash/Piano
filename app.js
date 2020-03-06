@@ -20,9 +20,12 @@ const note = [
   notes.c2
 ];
 
-note.forEach(item => {
-  item.play();
-});
+window.addEventListener(
+  "onload",
+  note.forEach(item => {
+    item.play();
+  })
+);
 
 const pianoKeys = {
   c: document.querySelectorAll(".key")[0],
