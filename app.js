@@ -22,8 +22,6 @@ const note = [
 
 note.forEach(item => {
   item.play();
-  item.pause();
-  item.currentTime = 0;
 });
 
 const pianoKeys = {
