@@ -71,56 +71,57 @@ pianoKey.forEach(item => {
   });
 });
 
-// play piano with keyboard
-
 function playPiano(keyNumber) {
-  switch (keyNumber) {
-    case 0:
-      notes.c.currentTime = 1;
+  note.forEach(item => {
+    let playPromise = item.play();
+    item.pause();
 
-      let playPromise = new Promise((resolve, reject) => {
-        resolve(notes.c.play());
-      });
-
-      if (playPromise !== undefined) {
-        playPromise
-          .then(() => {
-            console.log("hi");
-            notes.c.play();
-          })
-          .catch(() => console.log("error"));
-      }
-      break;
-    case 1:
-      notes.d.currentTime = 1;
-      notes.d.play();
-      break;
-    case 2:
-      notes.e.currentTime = 1;
-      notes.e.play();
-      break;
-    case 3:
-      notes.f.currentTime = 1;
-      notes.f.play();
-      break;
-    case 4:
-      notes.g.currentTime = 1;
-      notes.g.play();
-      break;
-    case 5:
-      notes.a.currentTime = 1;
-      notes.a.play();
-      break;
-    case 6:
-      notes.b.currentTime = 1;
-      notes.b.play();
-      break;
-    case 7:
-      notes.c2.currentTime = 1;
-      notes.c2.play();
-      break;
-  }
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          switch (keyNumber) {
+            case 0:
+              console.log("c");
+              notes.c.currentTime = 1;
+              notes.c.play();
+              break;
+            case 1:
+              console.log("d");
+              notes.d.currentTime = 1;
+              notes.d.play();
+              break;
+            case 2:
+              console.log("e");
+              notes.e.currentTime = 1;
+              notes.e.play();
+              break;
+            case 3:
+              notes.f.currentTime = 1;
+              notes.f.play();
+              break;
+            case 4:
+              notes.g.currentTime = 1;
+              notes.g.play();
+              break;
+            case 5:
+              notes.a.currentTime = 1;
+              notes.a.play();
+              break;
+            case 6:
+              notes.b.currentTime = 1;
+              notes.b.play();
+              break;
+            case 7:
+              notes.c2.currentTime = 1;
+              notes.c2.play();
+              break;
+          }
+        })
+        .catch(() => console.log("error"));
+    }
+  });
 }
+
 function pausePiano(keyNumber) {
   switch (keyNumber) {
     case 0:
@@ -179,6 +180,8 @@ function pausePiano(keyNumber) {
   };
 }
 // vvvv code from stack overflow end
+
+// play piano with keyboard
 
 function playWithKeyboard(e) {
   switch (e.code) {
