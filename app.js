@@ -20,24 +20,6 @@ const note = [
   notes.c2
 ];
 
-note.forEach(item => {
-  let playPromise = item.play();
-  item.pause();
-  // In browsers that don’t yet support this functionality,
-  // playPromise won’t be defined.
-  if (playPromise !== undefined) {
-    playPromise
-      .then(() => {
-        note.forEach(item => {
-          item.pause();
-        });
-      })
-
-      .catch(function(error) {
-        console.log(error);
-      });
-  }
-});
 const pianoKeys = {
   c: document.querySelectorAll(".key")[0],
   d: document.querySelectorAll(".key")[1],
