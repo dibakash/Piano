@@ -33,7 +33,7 @@ const pianoKey = [
 
 // play piano with mouse
 pianoKey.forEach(item => {
-  item.addEventListener("mousedown", function press() {
+  item.addEventListener("mousedown touchstart", function press() {
     item.classList.add("key-down");
     const keyNumber = pianoKey.indexOf(item);
     return playPiano(keyNumber);
