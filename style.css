@@ -7,7 +7,7 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   align-items: center;
   font-family: Philosopher;
   gap: 0;
@@ -24,6 +24,7 @@ header {
   padding: 1em;
   gap: 3em;
   text-align: center;
+  position: absolute;
   color: azure;
   line-height: 0.9;
 }
