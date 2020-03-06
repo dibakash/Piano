@@ -22,9 +22,7 @@ const note = [
 
 window.addEventListener(
   "onload",
-  note.forEach(item => {
-    item.play();
-  })
+ console.log("hi")
 );
 
 const pianoKeys = {
