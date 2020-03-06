@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Philosopher&display=swap");
+body {
+  background: linear-gradient(pink, rgb(226, 93, 115));
+}
+main,
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  font-family: Philosopher;
+  gap: 0;
+}
+header {
+  color: brown;
+  position: absolute;
+}
+
+.piano,
+.piano-body {
+  display: grid;
+  place-items: center;
+  padding: 1em;
+  gap: 3em;
+  text-align: center;
+  position: absolute;
+  color: azure;
+  line-height: 0.9;
+}
+
+.piano-body {
+  width: 60vw;
+  height: 50vh;
+  background-color: #219199;
+  border-radius: 9px;
+  box-shadow: black 3px 3px 3px;
+  grid-template-rows: 1fr 3fr;
+  display: grid;
+}
+.keys {
+  background-color: #fff;
+  height: 100%;
+  width: 90%;
+  border-radius: 0 0 9px 9px;
+  box-shadow: black 0 0 1px;
+  border: inset #e08686 6px;
+  display: grid;
+  align-self: center;
+  grid-template-columns: repeat(8, minmax(10px, 1fr));
+  justify-content: space-around;
+  justify-items: center;
+  color: #e7eeec;
+}
+
+.key {
+  width: 75%;
+  height: 96%;
+  border-radius: 0 0 9px 9px;
+  box-shadow: black 0.5px 6px 6px;
+  border-top: 0.15em outset #813e3e;
+}
+.key:nth-child(odd) {
+  background: linear-gradient(rgb(138, 166, 182), rgb(162, 223, 212));
+}
+.key:nth-child(even) {
+  background: linear-gradient(rgb(67, 151, 140), rgb(109, 181, 209));
+}
+.key:active,
+.key-down {
+  border-radius: 0 0 9px 9px;
+  box-shadow: black 0px 1px 1px !important;
+}
+
+.key:before {
+  font-size: 0.66em;
+  position: relative;
+  top: -4em;
+}
+.key:nth-child(1):before {
+  content: " Key A = note C";
+}
+.key:nth-child(2):before {
+  content: " Key S = note D";
+}
+.key:nth-child(3):before {
+  content: " Key D = note E";
+}
+.key:nth-child(4):before {
+  content: " Key F = note F";
+}
+.key:nth-child(5):before {
+  content: " Key G = note G";
+}
+.key:nth-child(6):before {
+  content: " Key H = note A";
+}
+.key:nth-child(7):before {
+  content: " Key J = note B";
+}
+.key:nth-child(8):before {
+  content: " Key K = note C";
+}
