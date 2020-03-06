@@ -54,9 +54,9 @@ pianoKey.forEach(item => {
     return pausePiano(keyNumber);
   });
   item.addEventListener("touchend", function press() {
-   item.classList.add("key-down");
+   item.classList.remove("key-down");
    const keyNumber = pianoKey.indexOf(item);
-   return playPiano(keyNumber);
+   return pausePiano(keyNumber);
   });
 });
 
