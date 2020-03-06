@@ -7,7 +7,7 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
-  /* overflow: hidden; */
+  overflow: hidden;
   align-items: center;
   font-family: Philosopher;
   gap: 0;
