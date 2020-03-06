@@ -9,6 +9,22 @@ const notes = {
   c2: document.querySelectorAll("audio")[7]
 };
 
+const note = [
+  notes.c,
+  notes.d,
+  notes.e,
+  notes.f,
+  notes.g,
+  notes.a,
+  notes.b,
+  notes.c2
+];
+
+note.forEach(item => {
+  item.play();
+  item.pause();
+});
+
 const pianoKeys = {
   c: document.querySelectorAll(".key")[0],
   d: document.querySelectorAll(".key")[1],
