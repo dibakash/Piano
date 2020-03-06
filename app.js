@@ -54,9 +54,9 @@ pianoKey.forEach(item => {
     return playPiano(keyNumber);
   });
   item.addEventListener("touchstart", function press() {
-   item.classList.add("key-down");
-   const keyNumber = pianoKey.indexOf(item);
-   return playPiano(keyNumber);
+    item.classList.add("key-down");
+    const keyNumber = pianoKey.indexOf(item);
+    return playPiano(keyNumber);
   });
   item.addEventListener("mouseup", function press() {
     item.classList.remove("key-down");
@@ -69,9 +69,9 @@ pianoKey.forEach(item => {
     return pausePiano(keyNumber);
   });
   item.addEventListener("touchend", function press() {
-   item.classList.remove("key-down");
-   const keyNumber = pianoKey.indexOf(item);
-   return pausePiano(keyNumber);
+    item.classList.remove("key-down");
+    const keyNumber = pianoKey.indexOf(item);
+    return pausePiano(keyNumber);
   });
 });
 
