@@ -52,6 +52,7 @@ pianoKey.forEach(item => {
   item.addEventListener("touchstart", function press() {
     item.classList.add("key-down");
     const keyNumber = pianoKey.indexOf(item);
+    console.log("cheking touchstart")
     return playPiano(keyNumber);
   });
   item.addEventListener("mouseup", function press() {
