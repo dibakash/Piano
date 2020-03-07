@@ -47,13 +47,13 @@ pianoKey.forEach(item => {
   item.addEventListener("mousedown", function press() {
     item.classList.add("key-down");
     const keyNumber = pianoKey.indexOf(item);
-    console.log("cheking mousedown event");
+    console.log("checking mousedown event");
     return playPiano(keyNumber);
   });
   item.addEventListener("touchstart", function press() {
     item.classList.add("key-down");
     const keyNumber = pianoKey.indexOf(item);
-    console.log("cheking touchstart");
+    console.log("checking touchstart");
     return playPiano(keyNumber);
   });
   item.addEventListener("mouseup", function press() {
@@ -69,6 +69,7 @@ pianoKey.forEach(item => {
   item.addEventListener("touchend", function press() {
     item.classList.remove("key-down");
     const keyNumber = pianoKey.indexOf(item);
+    console.log("checking touchend");
     return pausePiano(keyNumber);
   });
 });
