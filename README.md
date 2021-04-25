@@ -1,3 +1,3 @@
 # Piano
 Playable Piano
-Future plans available in futureupdates.md
+Future plans available in future_updates.md
